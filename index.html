@@ -30,25 +30,25 @@
 
             </div>
 
-            <div class="todo-card">
+           <div class="todo-card">
                 <div class="todo-card-first-section">
                     <div class="todo-priority-progress">
                         <div class="to-do-select">
-                            <select data-testid="test-todo-priority" >
-                                <option class="to-do-option" value="Low">LOW-PRIORITY</option>
+                            <p data-testid="test-todo-priority"> Low-Prority
+                                <!-- <option class="to-do-option" value="Low">LOW-PRIORITY</option>
                                 <option class="to-do-option" value="Medium">MEDIUM-PRIORITY</option>
-                                <option class="to-do-option" value="High">HIGH-PRIORITY</option>
-                            </select>
+                                <option class="to-do-option" value="High">HIGH-PRIORITY</option> -->
+                            </p>
     
                         </div>
     
                         <div class="to-do-select">
                            
-                            <select data-testid="test-todo-status" id="workspace">
-                                <option class="to-do-option" value="default">NOT STARTED</option>
+                            <p data-testid="test-todo-status" id="workspace"> In Progress
+                                <!-- <option class="to-do-option" value="default">NOT STARTED</option>
                                 <option class="to-do-option" value="work">IN PROGRESS</option>
-                                <option class="to-do-option" value="personal">DONE</option>
-                            </select>
+                                <option class="to-do-option" value="personal">DONE</option> -->
+                            </p>
     
                         </div>
 
@@ -86,8 +86,43 @@
                             <button data-testid="test-todo-delete-button">Delete</button>
                         </div>
                     </div>
+            </div> 
+            <form action="" data-testid="test-todo-edit-form">
+                <div data-testclass="test-todo-edit-class">
+                    <label data-testclass="test-todo-edit-label" for="edit-title">Task Title</label>
+                    <input data-testid="test-todo-edit-title-input" type="text" name="edit-title" placeholder="Type your task title">
                 </div>
 
+                <div data-testclass="test-todo-edit-class">
+                    <label data-testclass="test-todo-edit-label" for="edit-description">Description</label>
+                    <textarea data-testid="test-todo-edit-description-input" name="edit-description" cols="30" rows="10" placeholder="Describe your task description"></textarea>
+                </div>
+
+                <div data-testclass="test-todo-priority-status">
+                    <select data-testid="test-todo-edit-priority-select" name="edit-priority" id="edit-priority">
+                        <option value="Low">LOW-PRIORITY</option>
+                        <option value="Medium">MEDIUM-PRIORITY</option>
+                        <option value="High">HIGH-PRIORITY</option>
+                    </select>
+    
+                    <select data-testid="test-todo-status-control" name="edit-status">
+                        <option value="Not Started">NOT STARTED</option>
+                        <option value="In Progress">IN PROGRESS</option>
+                        <option value="Completed">COMPLETED</option>
+                    </select>
+                </div>
+                
+                <div data-testclass="test-todo-edit-class">
+                    <label data-testclass="test-todo-edit-label"for="edit-due-date">Due Date</label>
+                    <input data-testid="test-todo-edit-due-date-input" type="date" name="edit-due-date" id="edit-due-date">
+                </div>
+
+                <div data-testclass="test-todo-edit-button-container">
+                    <button data-testid="test-todo-save-button" type="button">Save</button>
+                    <button data-testid="test-todo-cancel-button" type="button">Cancel</button>
+                </div>
+                
+            </form>
                 
             </div>
            
